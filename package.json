@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "nodemon"
   },
   "dependencies": {
     "@hasura/ndc-sdk-typescript": "^1.2.3",
@@ -8,6 +9,7 @@
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
+    "nodemon": "^3.0.3",
     "typescript": "^5.2.2"
   }
 }
