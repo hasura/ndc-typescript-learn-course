@@ -1,0 +1,8 @@
+kind: AuthConfig
+version: v1
+definition:
+  allowRoleEmulationBy: admin
+  mode:
+    webhook:
+      method: Post
+      url: http://auth-hook.default:8080/webhook/ddn?role=admin

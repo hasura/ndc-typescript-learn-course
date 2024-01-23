@@ -1,0 +1,16 @@
+kind: ScalarType
+version: v1
+definition:
+  name: any
+  graphql:
+    typeName: any
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: my_sqlite_connector
+  dataConnectorScalarType: any
+  representation: any
+  graphql:
+    comparisonExpressionTypeName: anyComparisonExp

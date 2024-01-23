@@ -1,0 +1,14 @@
+version: 1
+project: allowed-jackal-7556
+
+# A build profile defines an environment, where to locate the supergraph 
+# resources and how HML files are related to subgraphs in that environment. 
+# You can create different build profiles for different environments, like 
+# development, staging or production and each may reference environment specific
+# resources. We have created this build profile for you to get you started.
+buildProfiles:
+  - build-profile.yaml
+
+# Note that the required default build profile is the one which is used to 
+# create a build when no profile has been explicitly specified.
+defaultBuildProfile: build-profile.yaml

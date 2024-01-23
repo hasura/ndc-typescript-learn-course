@@ -1,0 +1,57 @@
+kind: DataConnector
+version: v2
+definition:
+  name: my_sqlite_connector
+  url:
+    singleUrl:
+      value: https://tunnel-url-here
+  schema:
+    collections:
+      - arguments: {}
+        name: albums
+        deletable: false
+        foreign_keys: {}
+        uniqueness_constraints: {}
+        type: albums
+      - arguments: {}
+        name: artists
+        deletable: false
+        foreign_keys: {}
+        uniqueness_constraints: {}
+        type: artists
+    functions: []
+    object_types:
+      albums:
+        fields:
+          id:
+            type:
+              type: named
+              name: any
+          title:
+            type:
+              type: named
+              name: any
+          artist_id:
+            type:
+              type: named
+              name: any
+      artists:
+        fields:
+          id:
+            type:
+              type: named
+              name: any
+          name:
+            type:
+              type: named
+              name: any
+    procedures: []
+    scalar_types:
+      any:
+        aggregate_functions: {}
+        comparison_operators: {}
+        update_operators: {}
+  capabilities:
+    versions: ^0.1.0
+    capabilities:
+      query: {}

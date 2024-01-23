@@ -1,0 +1,19 @@
+version: 2
+spec:
+  environment: default
+  mode: replace
+  supergraph:
+    resources:
+      - supergraph/* 
+
+  # Subgraphs are used to group objects of your metadata together in a way 
+  # that makes sense for you and your team. Multiple HML files can belong to a 
+  # subgraph and you can have multiple subgraphs in a project. We have created 
+  # the required default subgraph for you, and added an HML file to 
+  # it to get you started.
+  subgraphs:
+  - name: default
+    resources:
+    - subgraphs/default/**/*.hml
+    
+  

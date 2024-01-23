@@ -1,0 +1,74 @@
+kind: ObjectType
+version: v1
+definition:
+  name: albums
+  graphql:
+    typeName: albums
+    inputTypeName: albumsInput
+  fields:
+    - name: id
+      type: any!
+    - name: title
+      type: any!
+    - name: artist_id
+      type: any!
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: albums
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - title
+          - artist_id
+
+---
+kind: Model
+version: v1
+definition:
+  name: albums
+  objectType: albums
+  filterableFields:
+    - fieldName: id
+      operators:
+        enableAll: true
+    - fieldName: title
+      operators:
+        enableAll: true
+    - fieldName: artist_id
+      operators:
+        enableAll: true
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: title
+      orderByDirections:
+        enableAll: true
+    - fieldName: artist_id
+      orderByDirections:
+        enableAll: true
+  arguments: []
+  graphql:
+    selectUniques: []
+    selectMany:
+      queryRootField: albums
+    filterExpressionType: albumsBoolExp
+    orderByExpressionType: albumsOrderBy
+  source:
+    collection: albums
+    dataConnectorName: my_sqlite_connector
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: albums
+  permissions:
+    - role: admin
+      select:
+        filter: null

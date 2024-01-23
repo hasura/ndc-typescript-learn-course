@@ -1,0 +1,65 @@
+kind: ObjectType
+version: v1
+definition:
+  name: artists
+  graphql:
+    typeName: artists
+    inputTypeName: artistsInput
+  fields:
+    - name: id
+      type: any!
+    - name: name
+      type: any!
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: artists
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - name
+
+---
+kind: Model
+version: v1
+definition:
+  name: artists
+  objectType: artists
+  filterableFields:
+    - fieldName: id
+      operators:
+        enableAll: true
+    - fieldName: name
+      operators:
+        enableAll: true
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: name
+      orderByDirections:
+        enableAll: true
+  arguments: []
+  graphql:
+    selectUniques: []
+    selectMany:
+      queryRootField: artists
+    filterExpressionType: artistsBoolExp
+    orderByExpressionType: artistsOrderBy
+  source:
+    collection: artists
+    dataConnectorName: my_sqlite_connector
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: artists
+  permissions:
+    - role: admin
+      select:
+        filter: null
