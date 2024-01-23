@@ -1,5 +1,5 @@
 version: 1
-project: allowed-jackal-7556
+project: project-name-here
 
 # A build profile defines an environment, where to locate the supergraph 
 # resources and how HML files are related to subgraphs in that environment. 
