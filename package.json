@@ -4,7 +4,8 @@
     "watch": "nodemon"
   },
   "dependencies": {
-    "@hasura/ndc-sdk-typescript": "^1.2.3",
+    "@hasura/ndc-sdk-typescript": "^4.6.0",
+    "prom-client": "^15.1.2",
     "sqlite": "^5.0.1",
     "sqlite3": "^5.1.6"
   },
