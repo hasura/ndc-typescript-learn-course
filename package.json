@@ -1,15 +1,16 @@
 {
   "scripts": {
     "build": "tsc",
-    "watch": "nodemon"
+    "test": "ndc-test replay --endpoint http://localhost:8080 --snapshots-dir snapshots"
   },
   "dependencies": {
-    "@hasura/ndc-sdk-typescript": "^1.2.3",
+    "@hasura/ndc-sdk-typescript": "^v4.6.0",
+    "@tsconfig/node20": "^20.1.4",
+    "prom-client": "^15.1.2",
     "sqlite": "^5.0.1",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3",
     "typescript": "^5.2.2"
   }
 }
