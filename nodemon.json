@@ -1,9 +1,6 @@
 {
   "restartable": "rs",
-  "ignore": [
-    ".git",
-    "node_modules/**/node_modules"
-  ],
+  "ignore": [".git", "node_modules/**/node_modules", "src/finishedIndex.ts"],
   "verbose": true,
   "execMap": {
     "js": "node --harmony"
@@ -11,12 +8,10 @@
   "events": {
     "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
   },
-  "watch": [
-    "src/"
-  ],
+  "watch": ["src/"],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "js,json",
-  "exec": "npm run build && node dist/index.js serve --configuration configuration.json"
+  "ext": "js,json,ts,tsx",
+  "exec": "npx tsc && node dist/index.js serve --configuration ."
 }
