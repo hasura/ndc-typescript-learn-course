@@ -1,4 +1,4 @@
-# Hasura DDN Native Data Connector in TypeScript Tutorial
+# Hasura DDN Native Data Connector in TypeScript Tutorial Companion Repository
 
 This repository is a [companion to the tutorial](https://hasura.io/docs/3.0/connectors/build-your-own/get-started/) 
 for building a Hasura DDN connector in TypeScript designed to help you create a data connector in TypeScript for 
